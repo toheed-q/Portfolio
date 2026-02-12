@@ -11,29 +11,20 @@ const ContactForm = () => {
           <div className='grid md:grid-cols-12 grid-cols-1 gap-8'>
             <div className='col-span-6'>
               <h2 className='max-w-72 text-[40px] leading-tight font-bold mb-9 text-midnight_text dark:text-white'>
-                Get Online Consultation
+                Get In Touch
               </h2>
-              <form className='flex flex-wrap w-full m-auto justify-between'>
+              <form action='mailto:toheedhashmi78@gmail.com' method='POST' encType='text/plain' className='flex flex-wrap w-full m-auto justify-between'>
                 <div className='sm:flex gap-3 w-full'>
                   <div className='mx-0 my-2.5 flex-1'>
                     <label
                       htmlFor='first-name'
                       className='pb-3 inline-block text-base'>
-                      First Name*
+                      Name*
                     </label>
                     <input
+                      name='name'
+                      required
                       className='w-full text-base px-4 rounded-lg py-2.5 border-border dark:border-dark_border border-solid dark:text-white  dark:bg-darkmode border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:border-solid focus:outline-0'
-                      type='text'
-                    />
-                  </div>
-                  <div className='mx-0 my-2.5 flex-1'>
-                    <label
-                      htmlFor='last-name'
-                      className='pb-3 inline-block text-base'>
-                      Last Name*
-                    </label>
-                    <input
-                      className='w-full text-base px-4 py-2.5 rounded-lg border-border dark:border-dark_border border-solid dark:text-white  dark:bg-darkmode border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:border-solid focus:outline-0'
                       type='text'
                     />
                   </div>
@@ -43,63 +34,37 @@ const ContactForm = () => {
                     <label
                       htmlFor='email'
                       className='pb-3 inline-block text-base'>
-                      Email address*
+                      Email*
                     </label>
                     <input
+                      name='email'
+                      required
                       type='email'
                       className='w-full text-base px-4 py-2.5 rounded-lg border-border dark:border-dark_border border-solid dark:text-white  dark:bg-darkmode border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:border-solid focus:outline-0'
                     />
                   </div>
-                  <div className='mx-0 my-2.5 flex-1'>
-                    <label
-                      htmlFor='Specialist'
-                      className='pb-3 inline-block text-base'>
-                      Specialist*
-                    </label>
-                    <select className='w-full text-base px-4 py-2.5 rounded-lg border-border dark:text-white border-solid dark:bg-darkmode border transition-all duration-500 focus:border-primary dark:focus:border-primary dark:border-dark_border focus:border-solid focus:outline-0'>
-                      <option value=''>Choose a specialist</option>
-                      <option value='Baking &amp; Pastry'>
-                        Choose a specialist
-                      </option>
-                      <option value='Exotic Cuisine'>Exotic Cuisine</option>
-                      <option value='French Desserts'>French Desserts</option>
-                      <option value='Seafood &amp; Wine'>
-                        Choose a specialist
-                      </option>
-                    </select>
-                  </div>
                 </div>
-                <div className='sm:flex gap-3 w-full'>
-                  <div className='mx-0 my-2.5 flex-1'>
+                <div className='w-full'>
+                  <div className='mx-0 my-2.5 w-full'>
                     <label
-                      htmlFor='date'
+                      htmlFor='message'
                       className='pb-3 inline-block text-base'>
-                      Date*
+                      Message*
                     </label>
-                    <input
-                      className='w-full text-base px-4 rounded-lg  py-2.5 outline-hidden dark:text-white dark:bg-darkmode border-border border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary dark:border-dark_border focus:border-solid focus:outline-0'
-                      type='date'
-                    />
-                  </div>
-                  <div className='mx-0 my-2.5 flex-1'>
-                    <label
-                      htmlFor='time'
-                      className='pb-3 inline-block text-base'>
-                      Time*
-                    </label>
-                    <input
-                      className='w-full text-base px-4 rounded-lg py-2.5 border-border outline-hidden dark:text-white dark:bg-darkmode border-solid border transition-all duration-500 focus:border-primary dark:focus:border-primary dark:border-dark_border focus:border-solid focus:outline-0'
-                      type='time'
+                    <textarea
+                      name='message'
+                      required
+                      rows={5}
+                      className='w-full text-base px-4 py-2.5 rounded-lg border-border dark:border-dark_border border-solid dark:text-white dark:bg-darkmode border transition-all duration-500 focus:border-primary dark:focus:border-primary focus:border-solid focus:outline-0'
                     />
                   </div>
                 </div>
                 <div className='mx-0 my-2.5 w-full'>
-                  <Link
-                    href='#'
+                  <button
                     className='bg-primary rounded-lg text-white py-4 px-8 mt-4 inline-block hover:bg-blue-700'
                     type='submit'>
-                    Make an appointment
-                  </Link>
+                    Send Message
+                  </button>
                 </div>
               </form>
             </div>

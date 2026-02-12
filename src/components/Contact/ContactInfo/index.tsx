@@ -14,18 +14,17 @@ const ContactInfo = () => {
               <div className='flex md:flex-col sm:flex-row flex-col md:items-start sm:items-center items-start h-full justify-between'>
                 <div>
                   <span className='text-midnight_text dark:text-white text-xl font-bold'>
-                    Email US
+                    Email Me
                   </span>
                   <p className='text-DeepOcean font-normal text-lg max-w-80 pt-3 pb-7 dark:text-white/50'>
-                    Please feel free to drop us a line. We will respond as soon
-                    as possible.
+                    Feel free to reach out. I'll respond as soon as possible.
                   </p>
                 </div>
                 <div>
                   <Link
-                    href='#'
+                    href='mailto:toheedhashmi78@gmail.com'
                     className='text-primary text-base font-medium flex items-center gap-3 group hover:text-midnight_text dark:hover:text-white'>
-                    Leave a message
+                    Send Email
                     <svg
                       width='23'
                       height='17'
@@ -46,18 +45,18 @@ const ContactInfo = () => {
               <div className='flex md:flex-col sm:flex-row flex-col md:items-start sm:items-center items-start h-full justify-between'>
                 <div>
                   <span className='text-midnight_text dark:text-white text-xl font-bold'>
-                    Careers
+                    WhatsApp
                   </span>
                   <p className='text-DeepOcean font-normal text-lg max-w-80 pt-3 pb-7 dark:text-white/50'>
-                    Sit ac ipsum leo lorem magna nunc mattis maecenas non
-                    vestibulum
+                    Connect with me directly on WhatsApp for quick responses.
                   </p>
                 </div>
                 <div>
                   <Link
-                    href='#'
+                    href='https://wa.me/923417774555'
+                    target='_blank'
                     className='text-primary text-base font-medium flex items-center gap-3 group hover:text-midnight_text dark:hover:text-white'>
-                    Send an application
+                    Message on WhatsApp
                     <svg
                       width='23'
                       height='17'
@@ -74,7 +73,7 @@ const ContactInfo = () => {
           </div>
           <div className='md:pt-32 pt-11 md:pb-28 pb-8'>
             <iframe
-              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d938779.7831767448!2d71.05098621661072!3d23.20271516446136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e82dd003ff749%3A0x359e803f537cea25!2sGANESH%20GLORY%2C%20Gota%2C%20Ahmedabad%2C%20Gujarat%20382481!5e0!3m2!1sen!2sin!4v1715676641521!5m2!1sen!2sin'
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d212270.5484487308!2d72.8776559!3d33.6844202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbfd07891722f%3A0x6059515c3bdb02b6!2sIslamabad%2C%20Pakistan!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s'
               width='1114'
               height='477'
               loading='lazy'
