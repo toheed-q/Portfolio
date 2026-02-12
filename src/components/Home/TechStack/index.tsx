@@ -42,11 +42,13 @@ const TechStackCarousel = () => {
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
+      setIsPaused(true)
       const scrollAmount = 300
       scrollRef.current.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth'
       })
+      setTimeout(() => setIsPaused(false), 1000)
     }
   }
 
