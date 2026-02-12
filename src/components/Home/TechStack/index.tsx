@@ -22,6 +22,23 @@ const techStackLogos = [
 
 const TechStackCarousel = () => {
   const scrollRef = React.useRef<HTMLDivElement>(null)
+  const [isPaused, setIsPaused] = React.useState(false)
+
+  React.useEffect(() => {
+    const scrollContainer = scrollRef.current
+    if (!scrollContainer || isPaused) return
+
+    const scroll = () => {
+      if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+        scrollContainer.scrollLeft = 0
+      } else {
+        scrollContainer.scrollLeft += 1
+      }
+    }
+
+    const interval = setInterval(scroll, 30)
+    return () => clearInterval(interval)
+  }, [isPaused])
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
@@ -65,8 +82,13 @@ const TechStackCarousel = () => {
             </svg>
           </button>
 
-          <div ref={scrollRef} className='flex overflow-x-auto scrollbar-hide scroll-smooth' style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-            {techStackLogos.map((tech, index) => (
+          <div 
+            ref={scrollRef} 
+            className='flex overflow-x-auto scrollbar-hide scroll-smooth' 
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}>
+            {[...techStackLogos, ...techStackLogos].map((tech, index) => (
               <div
                 key={index}
                 className='flex-shrink-0 mx-8 flex flex-col items-center justify-center group'>
