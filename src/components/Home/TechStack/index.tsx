@@ -21,6 +21,18 @@ const techStackLogos = [
 ]
 
 const TechStackCarousel = () => {
+  const scrollRef = React.useRef<HTMLDivElement>(null)
+
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 300
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      })
+    }
+  }
+
   return (
     <section className='bg-white dark:bg-darkmode py-16 overflow-hidden'>
       <div className='container mx-auto max-w-6xl px-4'>
@@ -35,8 +47,26 @@ const TechStackCarousel = () => {
         </h2>
         
         <div className='relative'>
-          <div className='flex animate-scroll'>
-            {[...techStackLogos, ...techStackLogos].map((tech, index) => (
+          <button
+            onClick={() => scroll('left')}
+            className='absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-darklight shadow-lg rounded-full p-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition'
+            aria-label='Scroll left'>
+            <svg width='24' height='24' viewBox='0 0 24 24' fill='none' className='text-midnight_text dark:text-white'>
+              <path d='M15 18L9 12L15 6' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
+            </svg>
+          </button>
+          
+          <button
+            onClick={() => scroll('right')}
+            className='absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white dark:bg-darklight shadow-lg rounded-full p-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition'
+            aria-label='Scroll right'>
+            <svg width='24' height='24' viewBox='0 0 24 24' fill='none' className='text-midnight_text dark:text-white'>
+              <path d='M9 18L15 12L9 6' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/>
+            </svg>
+          </button>
+
+          <div ref={scrollRef} className='flex overflow-x-auto scrollbar-hide scroll-smooth' style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+            {techStackLogos.map((tech, index) => (
               <div
                 key={index}
                 className='flex-shrink-0 mx-8 flex flex-col items-center justify-center group'>
@@ -59,21 +89,8 @@ const TechStackCarousel = () => {
       </div>
 
       <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        .animate-scroll {
-          animation: scroll 30s linear infinite;
-        }
-
-        .animate-scroll:hover {
-          animation-play-state: paused;
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
         }
       `}</style>
     </section>
