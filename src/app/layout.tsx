@@ -21,17 +21,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  session,
 }: Readonly<{
   children: React.ReactNode;
-  session:any
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
       <NextTopLoader />
       <AuthDialogProvider>
-      <SessionProviderComp session={session}>
+      <SessionProviderComp>
         <ThemeProvider
           attribute="class"
           enableSystem={true}
