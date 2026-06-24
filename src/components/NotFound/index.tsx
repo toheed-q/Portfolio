@@ -15,8 +15,9 @@ const NotFound = () => {
                 alt="image"
                 width={0}
                 height={0}
-                layout="responsive"
+                sizes="100vw"
                 quality={100}
+                style={{ width: "100%", height: "auto" }}
                 className="mx-auto max-w-full"
               />
             </div>
