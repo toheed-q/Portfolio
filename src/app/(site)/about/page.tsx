@@ -41,7 +41,7 @@ const experiences: Experience[] = [
   {
     role: "Software Developer Intern",
     company: "10Pearls",
-    meta: "Part-time · Remote",
+    meta: "Part-time · Hybrid",
     period: "Mar 2026 – May 2026",
     logo: "/images/company/10pearls.svg",
     logoBg: "bg-[#0b1f33]",
@@ -145,13 +145,13 @@ const page = () => {
                   <div className='absolute left-0 top-2 flex items-center justify-center'>
                     {exp.logo ? (
                       <div
-                        className={`w-12 h-12 md:w-16 md:h-16 ${exp.logoBg ?? 'bg-darkmode'} rounded-2xl flex items-center justify-center p-2.5 shadow-md ring-4 ring-section dark:ring-darklight`}
+                        className={`w-12 h-12 md:w-16 md:h-16 ${exp.logoBg ?? 'bg-darkmode'} rounded-2xl flex items-center justify-center p-2 md:p-2.5 shadow-md ring-4 ring-section dark:ring-darklight`}
                       >
                         <Image
                           src={exp.logo}
                           alt={`${exp.company} logo`}
-                          width={48}
-                          height={48}
+                          width={150}
+                          height={47}
                           className='w-full h-auto object-contain'
                         />
                       </div>
