@@ -52,10 +52,10 @@ const experiences: Experience[] = [
   {
     role: "Software Developer",
     company: "Freelance",
-    meta: "Remote",
+    meta: "Fiverr · Remote",
     period: "2023 – 2026",
-    icon: "mdi:laptop",
-    iconBg: "bg-gradient-to-br from-blue-500 to-indigo-600",
+    logo: "/images/company/fiverr.svg",
+    logoBg: "bg-white",
     summary:
       "Delivered custom, database-driven web apps end-to-end for clients worldwide — from requirements to deployment — accelerated with AI-assisted tooling.",
     tech: ["ASP.NET Core", "C#", "JavaScript", "SQL Server", "REST APIs", "Git", "Copilot"],

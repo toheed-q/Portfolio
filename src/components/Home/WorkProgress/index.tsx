@@ -56,7 +56,7 @@ const Progresswork = ({ isColorMode }: { isColorMode: Boolean }) => {
                   
                   <div className='bg-white/10 backdrop-blur-sm rounded-lg p-4'>
                     <p className='text-blue-200 text-sm mb-1'>Specialization</p>
-                    <p className='text-lg font-semibold'>ASP.NET Core • Blazor • WPF</p>
+                    <p className='text-lg font-semibold'>ASP.NET Core • Web APIs • Microservices</p>
                   </div>
                 </div>
               </div>
@@ -77,7 +77,7 @@ const Progresswork = ({ isColorMode }: { isColorMode: Boolean }) => {
               Technical Skills & Expertise
             </h2>
             <p className='text-gray dark:text-white/70 text-base font-semibold'>
-              Proficient in modern .NET technologies with hands-on experience in building enterprise applications, desktop software, and cross-platform solutions.
+              Proficient in modern .NET technologies with hands-on experience building scalable web applications, REST APIs, and real-time systems across the full stack.
             </p>
 
             <div className='block mx-auto pt-12'>

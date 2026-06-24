@@ -28,13 +28,14 @@ export const count = [
 ];
 
 export const Progress = [
-    { title: 'C#', Progress: 80 },
-    { title: 'ASP.NET Core', Progress: 80 },
-    { title: 'Blazor', Progress: 78 },
-    { title: 'Blazor Hybrid MAUI', Progress: 88 },
-    { title: 'WPF', Progress: 85 },
-    { title: 'SQL Server', Progress: 75 },
-    { title: 'Entity Framework Core', Progress: 82 }
+    { title: 'C#', Progress: 90 },
+    { title: 'ASP.NET Core & Web API', Progress: 88 },
+    { title: 'Entity Framework Core', Progress: 85 },
+    { title: 'SQL Server', Progress: 85 },
+    { title: 'Blazor (Server & WASM)', Progress: 82 },
+    { title: 'Angular', Progress: 78 },
+    { title: 'React.js', Progress: 75 },
+    { title: 'Azure & CI/CD', Progress: 72 }
 ];
 
 export const Servicebox = [
